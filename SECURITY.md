@@ -1,86 +1,91 @@
-# Security Policy
+# Security Policy – CollectiVAI
 
-CollectiVAI works with topics like AI, cybersecurity, blockchain and governance.  
-Even though much of the code is experimental and pre-production, **security still matters**.
+CollectiVAI is an experimental, pre-production project.  
+Even so, we take security and responsible disclosure seriously.
 
-This document explains how to report security issues responsibly.
-
----
-
-## Supported scope
-
-At this early stage, most repositories are:
-
-- prototypes,
-- lab setups,
-- documentation and scripts for personal use.
-
-There is no public “production service” yet.  
-Still, we appreciate responsible disclosure for any of the following:
-
-- vulnerabilities in code that could lead to:
-  - remote code execution,
-  - privilege escalation,
-  - data leakage,
-  - integrity issues in governance / voting logic (later),
-- unsafe default configurations in published examples,
-- serious weaknesses in security-related documentation.
+This policy applies to all repositories under the `collectiv-ai` organisation.
 
 ---
 
-## Reporting a vulnerability
+## 1. Supported repos
 
-If you believe you have found a security issue, **do not open a public GitHub issue**.
+Security reports are most relevant for:
 
-Instead, please contact:
+- `collectiv-ai-app` – iOS / iPadOS / macOS client  
+- `collectiv-ai-app-chain` – Cosmos-based App-Chain (pre-alpha)  
+- `collectiv-ai.github.io` – website & public docs  
+- any future backend / routing components
 
-- 📧 **info@collectivai.org**  
-  with subject line: `[SECURITY] <short summary>`
+Other repositories (branding, business plan, about-founder, sponsors, etc.)  
+are mostly documentation and less security-critical, but you can still report issues.
 
-Include, if possible:
+---
 
-- the affected repository and file(s),
-- steps to reproduce,
-- your environment (OS, version, tools),
+## 2. Reporting a vulnerability
+
+If you believe you have found a security issue, please **do not open a public issue**.
+
+Instead, contact:
+
+- **E-mail:** `info@collectivai.org`  
+  Subject suggestion: `SECURITY – <short summary>`  
+
+Please include:
+
+- which repository and component is affected,  
+- a short description of the issue,  
+- how to reproduce it (proof of concept),  
 - any potential impact you see.
 
-Please give us **reasonable time** to understand and fix the issue before you publish any details.
+If you can, also mention:
+
+- OS / platform (e.g. iOS 18, macOS 15, Ubuntu 22.04),  
+- version/commit of the project you tested.
+
+We prefer **plain text or simple Markdown** reports.
 
 ---
 
-## What to avoid
+## 3. What we do with your report
 
-When researching or reporting security issues, **do not**:
+We will:
 
-- attempt to access data that clearly does not belong to you,
-- perform denial-of-service attacks,
-- spam infrastructure or third-party services,
-- publicly share exploits before there has been a chance to respond.
+1. Acknowledge receipt of your report as soon as reasonably possible.  
+2. Analyse and verify the issue.  
+3. Plan a fix or mitigation where appropriate.  
+4. Decide how and when to disclose the issue publicly.
 
----
-
-## Cryptography, blockchain & AI
-
-Some repositories may later involve:
-
-- blockchain nodes (Bitcoin, Ethereum, Cosmos),
-- AI routing and prompt handling,
-- security and monitoring scripts.
-
-These are often used in **personal lab environments**.  
-Please be aware that:
-
-- examples may **not** be secure enough for production,
-- node setups may be intentionally simplified,
-- cryptographic considerations may still be evolving.
-
-If you see unsafe patterns in public docs or scripts, please report them as well.
+If you wish, we can **credit you** in release notes or security advisories,  
+unless you prefer to remain anonymous.
 
 ---
 
-## Appreciation
+## 4. Scope & principles
 
-Responsible disclosure helps make CollectiVAI safer for everyone –  
-from individual users to institutions and public bodies.
+Please:
 
-Thank you for taking the time to report issues responsibly. 🙏
+- Do **not** use security issues to access, modify or delete data that does not belong to you.  
+- Do **not** perform denial-of-service attacks.  
+- Do **not** exploit issues beyond what is necessary to demonstrate them.  
+
+CollectiVAI is an independent, small-scale project.  
+We cannot offer monetary bug bounties at this time,  
+but we deeply appreciate responsible disclosure and will credit your help.
+
+---
+
+## 5. Out of scope
+
+The following are generally out of scope:
+
+- vulnerabilities in third-party dependencies that we do not control,  
+  (but feel free to highlight them so we can update/patch),  
+- issues that require physical access to a local test machine,  
+- social engineering attacks against individuals.
+
+If you are unsure whether something is in scope, you can still send a **short email**  
+and ask before going deeper.
+
+---
+
+Thank you for helping to keep CollectiVAI safe and trustworthy.
