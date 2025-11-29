@@ -1,174 +1,139 @@
 # Contributing to CollectiVAI
 
-Thank you for your interest in contributing to **CollectiVAI – Democratic AI for Europe** 💙💛  
+Thank you for your interest in contributing to **CollectiVAI – Democratic AI for Europe**.  
+This document describes how to contribute across repositories under the `collectiv-ai` organisation.
 
-This document explains **how to get involved**, how we work across the different
-repositories, and what we ask from contributors.
-
----
-
-## 1. Code of Conduct
-
-By participating in CollectiVAI projects, you agree to follow the:
-
-👉 [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md)
-
-Please read it carefully. It reflects the project’s focus on  
-**democracy, dignity, safety and public interest**.
+The project is currently led by a single founder and built in a real lab environment.  
+Please keep this in mind: **small, focused contributions are very welcome**.
 
 ---
 
-## 2. Repositories Overview
+## Code of Conduct
 
-The `collectiv-ai` organisation is split into multiple repositories, for clarity:
+By participating in this project you agree to follow the  
+[`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md).
+
+---
+
+## Repositories overview
+
+Some key repositories:
 
 - **Organisation profile & meta**  
-  - `.github` – organisation profile, Code of Conduct, contributing.
+  `.github` – organisation profile and global guidelines
 
-- **Core projects**
-  - `collectiv-ai-app` – iOS / iPadOS / macOS client app (SwiftUI).  
-  - `collectiv-ai-app-chain` – Cosmos-based governance and voting chain (pre-alpha).  
-  - `collectiv-ai.github.io` – public website and documentation at [collectivai.org](https://collectivai.org).
+- **Public website & docs**  
+  `collectiv-ai.github.io` – landing page & public documentation
 
-- **Documentation & strategy**
-  - `collectiv-ai-business` – business plan, funding logic, strategy & roadmap.  
-  - `collectiv-ai-about-founder` – founder profile, lab description and portfolio (EN/DE).
+- **Client app**  
+  `collectiv-ai-app` – iOS / iPadOS / macOS SwiftUI app
 
-- **Branding & partners**
-  - `collectiv-ai-branding` – logos, colours, typography and visual identity.  
-  - `collectiv-ai-sponsors` – information for sponsors, partners and institutions.
+- **Cosmos App-Chain (backend)**  
+  `collectiv-ai-app-chain` – planned governance & voting chain
 
-Each repo has its own **focus** and may include additional docs in a `docs/` folder.
+- **Branding & visual identity**  
+  `collectiv-ai-branding` – logo, colours, design system
 
----
+- **Business plan & strategy**  
+  `collectiv-ai-business` – public business logic and roadmap
 
-## 3. Ways to Contribute
+- **Founder profile & lab**  
+  `collectiv-ai-about-founder` – portfolio, background, ecosystem
 
-You don’t have to write code to contribute. Helpful contributions include:
+- **Sponsors & partners**  
+  `collectiv-ai-sponsors` – material for supporters and institutions
 
-- 🐞 **Bug reports** – clear descriptions, steps to reproduce, screenshots.  
-- 💡 **Feature ideas** – suggestions that align with democratic, civic and public-interest use cases.  
-- 📝 **Documentation improvements** – fixing typos, clarifying explanations, adding examples.  
-- 🌍 **Translations & language polish** – especially English ↔ German.  
-- 🧪 **Testing** – trying out prototypes and giving feedback on UX, clarity, accessibility.  
-- 🛡 **Security / privacy reviews** – flagging risks, suggesting safer patterns.
+Each repository may contain additional, repo-specific docs.
 
 ---
 
-## 4. How to Propose Changes
+## How to get started
 
-### 4.1. For small fixes (typos, small docs, tiny code changes)
+1. **Browse existing issues**
 
-1. **Fork** the repository you want to change.  
-2. Create a branch, e.g. `fix/docs-typo` or `chore/update-readme`.  
-3. Make your changes and commit with a clear message.  
-4. Open a **Pull Request (PR)**:
-   - describe _what_ you changed,
-   - explain _why_ it improves things.
+   - Look for issues labelled `good first issue`, `help wanted` or similar.
+   - If something is unclear, ask in the issue before starting work.
 
-### 4.2. For larger features or architectural changes
+2. **Open an issue before larger changes**
 
-1. First open an **issue** titled like:  
-   `Proposal: Add X to Y (App / Chain / Website)`  
-2. Describe:
-   - the problem or use case,  
-   - your proposed solution,  
-   - why it fits the CollectiVAI vision (democratic AI, public interest, EU focus).  
-3. Wait for initial feedback / alignment.  
-4. Then implement in a feature branch and open a PR referencing the issue.
+   - For new features or bigger refactors:  
+     open an issue describing:
+     - what you want to change,
+     - why it is useful,
+     - how you roughly plan to implement it.
 
-This helps keep the overall direction consistent and avoids wasted effort.
+   This helps to align expectations and avoid duplicate work.
 
----
+3. **Fork & branch**
 
-## 5. Coding & Style Guidelines
-
-Because CollectiVAI spans multiple stacks, styles are kept *pragmatic*:
-
-### 5.1. General
-
-- Prefer **clear, explicit names** over clever abstractions.  
-- Add short **comments** when something is non-obvious.  
-- Keep the **user impact** in mind (citizens, experts, institutions).  
-- Avoid adding heavy dependencies unless they clearly add value.
-
-### 5.2. Swift / SwiftUI (App)
-
-- Use Swift’s modern features where appropriate (e.g. `async/await`).  
-- Group views into meaningful modules (e.g. `Chat`, `Contracts`, `Chain`, `Settings`).  
-- Keep business logic in view models / managers rather than deep in views.
-
-### 5.3. Go / Cosmos SDK (Chain)
-
-- Follow the existing module structure under `app/` and `x/collectivai/`.  
-- Add or update tests where possible, especially for governance logic.  
-- Document new messages, params and state transitions in `docs/`.
-
-### 5.4. Docs & Markdown
-
-- Main language: **English**.  
-- German sections are welcome, especially for public-facing docs.  
-- Use headings, lists and short paragraphs for readability.
+   - Fork the repository you want to contribute to.
+   - Create a descriptive branch name, e.g.  
+     `feature/add-contracts-filter` or `fix/typo-chain-docs`.
 
 ---
 
-## 6. Security & Responsible Disclosure
+## Pull request guidelines
 
-If you believe you have found a **security issue**, privacy risk, or behaviour  
-that could harm users or institutions:
+When submitting a PR:
 
-- **Do not** open a public GitHub issue with full details.  
-- Instead, contact **privately**:
+- **Keep it focused**
 
-  - ✉️ **info@collectivai.org**
+  Prefer small, well-scoped changes over huge “mega PRs”.
 
-Please include:
+- **Explain the change**
 
-- which repo / component is affected,  
-- how the issue could be exploited or misused,  
-- any guidance on potential mitigation.
+  In the PR description, include:
+  - what you changed,
+  - why you changed it,
+  - any side effects or breaking changes.
 
-Security-related reports will be treated with **priority** and **confidentiality**.
+- **Link related issues**
 
----
+  If there is a related issue, reference it with  
+  `Closes #123` or `Relates to #123`.
 
-## 7. Governance & Decision-Making
+- **Style & languages**
 
-At this stage, CollectiVAI is a **founder-led** and **exploratory** project.
-
-- The founder (and future core maintainers) have final say on:
-  - project scope and roadmap,
-  - acceptance of features and PRs,
-  - alignment with **democratic, human-centred and European** values.
-
-As the project matures, governance models may evolve towards more  
-**participatory and transparent structures**, especially for:
-
-- the Cosmos-based chain,  
-- civic and institutional partnerships,  
-- public funding and long-term sustainability.
+  - code: follow existing style in the repo (Swift, Go, Shell, etc.),
+  - docs: English is preferred, German is welcome where appropriate,
+  - keep language clear, respectful and accessible.
 
 ---
 
-## 8. Recognition & Attribution
+## Documentation & writing
 
-Contributions may be recognised by:
+Contributions to documentation are **highly appreciated**:
 
-- listing contributors in `README` or `CONTRIBUTORS` sections,  
-- mentioning contributors in release notes,  
-- highlighting community work in docs or on the website.
+- improving clarity in existing docs,
+- fixing typos or broken links,
+- adding examples or diagrams,
+- translating small sections (EN/DE) where it helps understanding.
 
-If you prefer **not** to be listed by name, please mention this in your PR or issue.
+Please avoid adding promotional or marketing content –  
+the focus is on **clarity, transparency and public understanding**.
 
 ---
 
-## 9. Thank you 💙💛
+## Security & sensitive topics
 
-By contributing to CollectiVAI, you are helping to explore a different path for AI:
+If your contribution touches **security**, **cryptography**, **blockchain nodes**,  
+or other sensitive areas:
 
-- more **democratic**,  
-- more **transparent**,  
-- more **human-centred**,  
-- and rooted in **European values**.
+- be extra careful not to include:
+  - secrets, API keys, private endpoints,
+  - personal data or system identifiers,
+- describe expected security implications in the PR description,
+- if you believe you found a vulnerability, please follow  
+  the [`SECURITY.md`](./SECURITY.md) process instead of opening a public issue.
 
-Thank you for your time, your ideas and your care.
+---
+
+## Questions & ideas
+
+If you are unsure where to start:
+
+- open a small “question / idea” issue,
+- or reach out via the contact details on the website:  
+  **https://collectivai.org**
+
+Thank you for helping to shape CollectiVAI as a **democratic, human-centred AI ecosystem**. 🙌
