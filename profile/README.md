@@ -6,7 +6,7 @@
 <h3 align="center">Democratic AI for Europe</h3>
 
 <p align="center">
-  Human-centred AI · Civic tech · Public infrastructure
+  CollectiVAI – Your Human-centered AI infrastructure for people in Europe.. Made in Europe
 </p>
 
 ---
