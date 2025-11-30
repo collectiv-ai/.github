@@ -103,4 +103,4 @@ Source code licenses are defined **per repository**
 The **CollectiVAI name, logo and visual identity** are protected.  
 Any use in products, services or campaigns requires prior written permission.
 
-© David Miecznikowski, CollectiVAI.
+© David Compasso, CollectiVAI.
